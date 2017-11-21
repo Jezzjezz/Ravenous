@@ -1,5 +1,5 @@
-const clientId = 'a40EGc4uU0JIkUXb8HpOgA';
-const secret = 'esYhVHsgVNCdsHJ0cGWCaCYfdVCh6SKNiY5TSE1Yq56t7k8oiN90GbsAdAiW6MOl';
+const clientId = 'clientID';
+const secret = 'secret word';
 const urlCORS = 'https://cors-anywhere.herokuapp.com/';
 
 let accessToken = '';
