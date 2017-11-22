@@ -1,10 +1,10 @@
 const clientId = 'clientID';
-const secret = 'secret word';
+const secret = 'secret code';
 const urlCORS = 'https://cors-anywhere.herokuapp.com/';
 
-let accessToken = '';
+let accessToken;
 
-let Yelp = {
+const Yelp = {
   getAccessToken(){
   if (accessToken){
     return new Promise(resolve =>
@@ -21,7 +21,8 @@ let Yelp = {
        return Yelp.getAccessToken().then(()=>
        {return fetch(`${urlCORS}https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`,
          {headers: {Authorization: 'Bearer ${accessToken}'}
-       }).then(response => {
+       });
+     }).then(response => {
          return response.json();
        }).then(jsonResponse =>
        {if(jsonResponse.businesses){
@@ -36,11 +37,9 @@ let Yelp = {
          category: business.categories[0].title,
          rating: business.rating,
          reviewCount: business.review__count
-       }
-     ));
+       }));
    }
  });
-});
 }
 };
 
