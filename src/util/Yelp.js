@@ -20,7 +20,7 @@ const Yelp = {
      search (term, location, sortBy){
        return Yelp.getAccessToken().then(()=>
        {return fetch(`${urlCORS}https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`,
-         {headers: {Authorization: 'Bearer ${accessToken}'}
+         {headers: {Authorization: `Bearer ${accessToken}`}
        })
      }).then(response => {
          return response.json();
