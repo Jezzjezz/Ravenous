@@ -61,7 +61,7 @@ handleSearch(event){
       <input placeholder="Search Businesses" onChange={this.handleTermChange}/>
       <input placeholder="Where?" onChange={this.handleLocationChange}/>
       </div>
-      <div className="SearchBar-submit" onChange={this.handleSearch}>
+      <div className="SearchBar-submit" onClick={this.handleSearch}>
       <a>Lets Go</a>
       </div>
       </div>
